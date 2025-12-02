@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.consumer;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.kafka.annotation.KafkaListener;
 import java.io.FileWriter;
@@ -8,6 +9,7 @@ import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @Component
+@Profile("consumer")
 public class MessageConsumer {
 
     private final List<String> collectedData = new CopyOnWriteArrayList<>();

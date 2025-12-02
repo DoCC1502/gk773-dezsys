@@ -1,14 +1,14 @@
-package com.example.demo.controller;
+package com.example.demo.consumer.controller;
 
-import com.example.demo.MessageConsumer;
-import org.apache.kafka.common.protocol.Message;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.consumer.MessageConsumer;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @RestController
+@Profile("consumer")
 public class WarehouseController {
 
 

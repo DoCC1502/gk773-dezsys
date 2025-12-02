@@ -1,8 +1,10 @@
-package com.example.demo;
+package com.example.demo.producer;
 
+import com.example.demo.model.WarehouseData;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Component
+@Profile("producer")
 public class MessageProducer {
 
     @Autowired
